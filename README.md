@@ -25,11 +25,11 @@ Ahora tenemos la web disponible para configurar
 2. Rellenamos los datos de la base de datos **DB Name**, **DB USer** y **DB Pass** con los datos generados en el script anterior (están en la pantalla de putty).  
 3. **Default Time Zone** seleccionamos Europe/Madrid  
 4. Pasamos a la siguiente pantalla y en **Admin Panel Information** ponemos **admin**  
-5. en **User**, **Password**,  **mail**,ponemos nuestros datos para poder acceder al administrador (obtenidos de la pantalla de putty)  
+5. En **User**, **Password**,  **mail**, ponemos nuestros datos para poder acceder al administrador (obtenidos de la pantalla de putty)  
 6. Volver al terminal y escribir ```sudo ./finalizaPW.sh miweb```   
 
 
-** Para **BORRAR** una web** ```sudo ./borraPW.sh miweb``` (USAR ESTE COMANDO CON PRECAUCIÓN porque nos borraría toda la web con sus archivos, fotos, etc.  )   
+** Para BORRAR una web** ```sudo ./borraPW.sh miweb``` (USAR ESTE COMANDO CON PRECAUCIÓN porque nos borraría toda la web con sus archivos, fotos, etc.  )   
 
 ### Si nos aparece el aviso en rojo "This request ... to be forged"
 ```sh
