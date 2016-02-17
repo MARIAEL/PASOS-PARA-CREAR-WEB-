@@ -29,7 +29,7 @@ Ahora tenemos la web disponible para configurar
 6. Volver al terminal y escribir ```sudo ./finalizaPW.sh miweb```   
 
 
-** Para BORRAR una web** ```sudo ./borraPW.sh miweb``` (USAR ESTE COMANDO CON PRECAUCIÓN porque nos borraría toda la web con sus archivos, fotos, etc.  )   
+**Para BORRAR una web** ```sudo ./borraPW.sh miweb``` (USAR ESTE COMANDO CON PRECAUCIÓN porque nos borraría toda la web con sus archivos, fotos, etc.  )   
 
 ### Si nos aparece el aviso en rojo "This request ... to be forged"
 ```sh
@@ -49,12 +49,12 @@ $ sudo nano config.php
 ###Instalar Angular con un HTML mínimo  
   
 1. Módulos > nuevo > nombre de la clase > Pages2JSON     
-2. Pegar este código (**Pages2JSON**)en nuestra web  
+2. Pegar este código (**Pages2JSON**) en nuestra web  
 3. En cada plantilla (pe. home.php) debemos editarla y en la última pestaña (Pages2JSON) indicarle que campos serán visibles  
  
 Editar las siguientes páginas como sigue:  
 
-** _init.php**  
+**_init.php**  
 
 ```php
 <html>
