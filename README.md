@@ -1,4 +1,5 @@
 # 1.-Putty  
+https://github.com/MARIAEL/PROCESSWIRE-PUTTY#descargar-putty
 #2.- Terminal crear web.  
 #3.- Configurar desde el navegador  
 #4.- Crear campos (instalar módulos)  
