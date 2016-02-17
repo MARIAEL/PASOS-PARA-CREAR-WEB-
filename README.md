@@ -15,36 +15,47 @@ $ wget https://raw.githubusercontent.com/manviny/EC2/master/PwScripts.sh && sudo
 ###Estos son los pasos que seguimos cada vez que queramos crear una web.
 ```sh
 # Ahora podemos crear una nueva web con: sudo ./creaPW.sh seguido de nombreWeb y DBpass
-$ sudo ./creaPW.sh miweb **dbpass**  (sin los signos *)
+$ sudo ./creaPW.sh miweb dbpass  
 ```  
 
 #3.- Configurar desde el navegador  
 
-Ahora tenemos la web disponible para configurar
-1. Ir al navegador y ponemos la url: usuario.bitnamiapp.com/miweb  
-2. Rellenamos los datos de la base de datos **DB Name**, **DB USer** y **DB Pass** con los datos generados en el script anterior.
-3. **Default Time Zone** seleccionamos Europe/Madrid
-4. Pasamos a la siguiente pantalla y en **Admin Panel Information** ponemos **admin**
-5. en **User**, **Password**,  **mail**,ponemos nuestros datos para poder acceder al administrador
-6. Volver al terminal y escribir **sudo ./finalizaPW.sh miweb**  
-** Para **BORRAR** una web **sudo ./borraPW.sh miweb**  
+Ahora tenemos la web disponible para configurar  
+1. Ir al navegador y ponemos la url: usuario.bitnamiapp.com/miweb    
+2. Rellenamos los datos de la base de datos **DB Name**, **DB USer** y **DB Pass** con los datos generados en el script anterior (están en la pantalla de putty).  
+3. **Default Time Zone** seleccionamos Europe/Madrid  
+4. Pasamos a la siguiente pantalla y en **Admin Panel Information** ponemos **admin**  
+5. en **User**, **Password**,  **mail**,ponemos nuestros datos para poder acceder al administrador (obtenidos de la pantalla de putty)  
+6. Volver al terminal y escribir ```sudo ./finalizaPW.sh miweb```   
+
+
+** Para **BORRAR** una web** ```sudo ./borraPW.sh miweb``` (USAR ESTE COMANDO CON PRECAUCIÓN porque nos borraría toda la web con sus archivos, fotos, etc.  )   
 
 ### Si nos aparece el aviso en rojo "This request ... to be forged"
 ```sh
-# Abrir config.php 
+# Abrir config.php  
+
 $ cd ./apps/miweb/htdocs/site
-$ sudo nano config.php
+$ sudo nano config.php  
+
 # al final del texto poner
 
-  $config->protectCSRF = false;
-# Para guardar Ctrl+X y luego Y+enter  
-```
-###Instalar Angular con un HTML mínimo
+  $config->protectCSRF = false;  
   
-1. Módulos > nuevo > nombre de la clase > Pages2JSON    
-2. Pegar este código en nuestra web  
-3. En cada plantilla (home.php) debemos editarla y en la última pestaña indicarle que campos serán visibles
- _init.php
+# Para guardar Ctrl+X y luego Y+enter  
+
+```
+
+###Instalar Angular con un HTML mínimo  
+  
+1. Módulos > nuevo > nombre de la clase > Pages2JSON     
+2. Pegar este código (**Pages2JSON**)en nuestra web  
+3. En cada plantilla (pe. home.php) debemos editarla y en la última pestaña (Pages2JSON) indicarle que campos serán visibles  
+ 
+Editar las siguientes páginas como sigue:  
+
+** _init.php**  
+
 ```php
 <html>
   <head>
@@ -55,7 +66,8 @@ $ sudo nano config.php
   </head>
   <body ng-app="myApp">
 ```
-home.php
+**home.php**  
+
 ```php
 <script>
   app.controller('HomeCtrl',function($scope){
@@ -67,11 +79,14 @@ home.php
 	<h1>hi there {{page.title}}</h1>
 </div>
 ```
-_main.php
+**_main.php**  
+
 ```php
   </body>
 </html>
 ```  
+
+
 ## Conectar sublime text con servidor creado con bitnami [video](https://youtu.be/mAgvZ-dyPWQ)
 
 
