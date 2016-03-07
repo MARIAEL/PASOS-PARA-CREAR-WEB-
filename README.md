@@ -14,7 +14,7 @@ $ wget https://raw.githubusercontent.com/manviny/EC2/master/PwScripts.sh && sudo
 ```
 ###Estos son los pasos que seguimos cada vez que queramos crear una web.
 ```sh
-# Ahora podemos crear una nueva web con: sudo ./creaPW.sh seguido de nombreWeb y DBpass
+# Ahora podemos crear una nueva web con: sudo ./creaPW.sh seguido de nombreWeb y DBpass (dbpass es mi contraseña de bitnami)
 $ sudo ./creaPW.sh miweb dbpass  
 ```  
 
@@ -24,7 +24,7 @@ Ahora tenemos la web disponible para configurar
 1. Ir al navegador y ponemos la url: usuario.bitnamiapp.com/miweb    
 2. Rellenamos los datos de la base de datos **DB Name**, **DB USer** y **DB Pass** con los datos generados en el script anterior (están en la pantalla de putty).  
 3. **Default Time Zone** seleccionamos Europe/Madrid  
-4. Pasamos a la siguiente pantalla y en **Admin Panel Information** ponemos **admin**  
+4. Pasamos a la siguiente pantalla y en **Admin Login URL** ponemos **admin**  
 5. En **User**, **Password**,  **mail**, ponemos nuestros datos para poder acceder al administrador (obtenidos de la pantalla de putty)  
 6. Volver al terminal y escribir ```sudo ./finalizaPW.sh miweb```   
 
